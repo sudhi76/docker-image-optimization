@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "date": "2026-11-11",
+    "platform": "linux/arm64 (Darwin host)",
+    "docker": "29.5.2",
+    "trivy": "0.76.2"
+  },
+  "results": [
+    {
+      "variant": "01-naive",
+      "size_mb": 1107.3,
+      "gzip_mb": 349.6,
+      "layers": 10,
+      "user": "root",
+      "shell": true,
+      "rebuild_s": 10.3,
+      "startup_ms": 130,
+      "stop_s": 0.1,
+      "checks": {
+        "healthz": true,
+        "time zone": true,
+        "metrics": true,
+        "HEALTHCHECK": true
+      },
+      "os_packages": 208,
+      "go_modules": 21,
+      "vulns": {
+        "CRITICAL": 1,
+        "HIGH": 173,
+        "MEDIUM": 520,
+        "LOW": 923
+      }
+    },
+    {
+      "variant": "02-multistage",
+      "size_mb": 159.8,
+      "gzip_mb": 57.3,
+      "layers": 2,
+      "user": "root",
+      "shell": true,
+      "rebuild_s": 6.8,
+      "startup_ms": 102,
+      "stop_s": 0.1,
+      "checks": {
+        "healthz": true,
+        "time zone": true,
+        "metrics": true,
+        "HEALTHCHECK": true
+      },
+      "os_packages": 78,
+      "go_modules": 11,
+      "vulns": {
+        "CRITICAL": 0,
+        "HIGH": 48,
+        "MEDIUM": 75,
+        "LOW": 64
+      }
+    },
+    {
+      "variant": "03-alpine",
+      "size_mb": 19.6,
+      "gzip_mb": 7.9,
+      "layers": 3,
+      "user": "10001",
+      "shell": true,
+      "rebuild_s": 1.5,
+      "startup_ms": 100,
+      "stop_s": 0.1,
+      "checks": {
+        "healthz": true,
+        "time zone": true,
+        "metrics": true,
+        "HEALTHCHECK": true
+      },
+      "os_packages": 18,
+      "go_modules": 11,
+      "vulns": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 1,
+        "LOW": 0
+      }
+    },
+    {
+      "variant": "04-distroless",
+      "size_mb": 12.6,
+      "gzip_mb": 4.5,
+      "layers": 14,
+      "user": "65532",
+      "shell": false,
+      "rebuild_s": 1.6,
+      "startup_ms": 113,
+      "stop_s": 0.1,
+      "checks": {
+        "healthz": true,
+        "time zone": true,
+        "metrics": true,
+        "HEALTHCHECK": true
+      },
+      "os_packages": 6,
+      "go_modules": 11,
+      "vulns": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      }
+    },
+    {
+      "variant": "05-scratch",
+      "size_mb": 9.9,
+      "gzip_mb": 3.8,
+      "layers": 2,
+      "user": "65532:65532",
+      "shell": false,
+      "rebuild_s": 1.6,
+      "startup_ms": 106,
+      "stop_s": 0.1,
+      "checks": {
+        "healthz": true,
+        "time zone": true,
+        "metrics": true,
+        "HEALTHCHECK": true
+      },
+      "os_packages": 0,
+      "go_modules": 11,
+      "vulns": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      }
+    }
+  ]
+}
